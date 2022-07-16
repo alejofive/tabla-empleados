@@ -36,7 +36,8 @@ function Home() {
   };
 
   const employeesFiltered = () => {
-    let results = employees.filter((employee) =>
+    let results = employees.sort((a, b) => (a.id < b.id ? 1 : -1));
+    results = results.filter((employee) =>
       employee.name.toLowerCase().includes(search.toLowerCase())
     );
     results = results.filter((employee) =>
@@ -66,7 +67,7 @@ function Home() {
             <input
               className="px-6 py-2.5"
               type="text"
-              placeholder="18 Records..."
+              placeholder="Enter word"
               value={search}
               onChange={searcher}
             />
@@ -91,9 +92,8 @@ function Home() {
         </div>
         <div>
           <Link
-            to="crear"
+            to="/create"
             className="py-2.5 px-10 bg-green-200 font-bold rounded-full text-green-600"
-            href=""
           >
             Crear
           </Link>
