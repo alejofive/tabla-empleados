@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="bg-neutral-200">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,38 +1,42 @@
-*{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-button{
+button {
   border: none;
   background: none;
 }
 
-.container{
+.container {
   padding: 20px;
   width: 100%;
   margin: auto;
 }
 
-.active{
-  background:rgb(217, 249, 239) ;
+.active {
+  background: rgb(217, 249, 239);
   color: rgb(91, 173, 150);
   font-weight: bold;
   padding: 5px 15px;
   border-radius: 100px;
 }
 
-.inactive{
-  background:rgb(252, 246, 212) ;
+.inactive {
+  background: rgb(252, 246, 212);
   color: rgb(184, 128, 77);
   font-weight: bold;
   padding: 5px 15px;
   border-radius: 100px;
 }
 
-.offline{
-  background:rgb(252, 233, 229) ;
+.offline {
+  background: rgb(252, 233, 229);
   color: rgb(202, 102, 110);
   font-weight: bold;
   padding: 5px 15px;

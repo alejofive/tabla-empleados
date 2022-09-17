@@ -59,7 +59,7 @@ function Home() {
     }
   };
   return (
-    <div className="container bg-purple-50 ">
+    <div className="container  ">
       <div className="w-full flex justify-between items-center">
         <div className="flex items-center ">
           <div className="flex justify-items-center mr-20">

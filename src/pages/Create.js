@@ -35,100 +35,123 @@ const Crear = () => {
   };
 
   return (
-    <form action="" method="post" onSubmit={guardarEmployees}>
-      <h1 className="text-center mt-10 text-2xl font-bold ">
-        Ingresa el nuevo Empleado
-      </h1>
-      <div className="w-full flex items-center justify-center mt-10 flex-col">
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Name:</label>
-          <input
-            className="px-6 py-2.5 border"
-            type="text"
-            placeholder="Ingresar"
-            onChange={handleInput}
-            name="name"
-            value={newEmployees.name}
-            required
-          />
-        </div>
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Email:</label>
-          <input
-            className="px-6 py-2.5 border"
-            type="email"
-            placeholder="Ingresar"
-            onChange={handleInput}
-            name="email"
-            value={newEmployees.email}
-            required
-          />
-        </div>
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Title:</label>
-          <input
-            className="px-6 py-2.5 border"
-            type="text"
-            placeholder="Ingresar"
-            onChange={handleInput}
-            name="title"
-            value={newEmployees.title}
-            required
-          />
-        </div>
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Status:</label>
-          <select
-            name="status"
-            className="px-6 py-2.5 border"
-            onChange={handleInput}
-            value={newEmployees.status}
-            required
-          >
-            <option value="">Status</option>
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-            <option value="Offline">Offline</option>
-          </select>
-        </div>
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Age:</label>
-          <input
-            className="px-6 py-2.5 border"
-            type="number"
-            placeholder="Ingresar"
-            onChange={handleInput}
-            name="age"
-            value={newEmployees.age}
-            required
-          />
-        </div>
+    <div className="bg-neutral-200">
+      <form
+        action=""
+        method="post"
+        onSubmit={guardarEmployees}
+        className="bg-white w-3/6 m-auto pt-10 pb-10"
+      >
+        <h1 className="text-center text-2xl font-bold ">Enter employee</h1>
+        <div className="w-full flex items-center justify-center mt-4 flex-col pr-14 pl-14">
+          <div className="flex flex-col mt-5 w-full">
+            <label className="text-xs mb-3 font-bold" htmlFor="">
+              Name:
+            </label>
+            <input
+              className="px-6 py-2.5 border border-zinc-800 rounded-lg w-full"
+              type="text"
+              placeholder="Enter name"
+              onChange={handleInput}
+              name="name"
+              value={newEmployees.name}
+              required
+            />
+          </div>
+          <div className="flex flex-col mt-5 w-full">
+            <label className="text-xs mb-3 font-bold" htmlFor="">
+              Email:
+            </label>
+            <input
+              className="px-6 py-2.5 border w-full border-zinc-800 rounded-lg"
+              type="email"
+              placeholder="Example@gmail.com"
+              onChange={handleInput}
+              name="email"
+              value={newEmployees.email}
+              required
+            />
+          </div>
+          <div className="flex flex-col mt-5 w-full ">
+            <label className="text-xs mb-3 font-bold" htmlFor="">
+              Title:
+            </label>
+            <input
+              className="px-6 py-2.5 border w-full border-zinc-800 rounded-lg"
+              type="text"
+              placeholder="Enter title"
+              onChange={handleInput}
+              name="title"
+              value={newEmployees.title}
+              required
+            />
+          </div>
+          <div className="flex flex-col mt-5 w-full">
+            <label className="text-xs mb-3 font-bold " htmlFor="">
+              Status:
+            </label>
+            <select
+              name="status"
+              className="px-6 py-2.5 border w-full border-zinc-800 rounded-lg"
+              onChange={handleInput}
+              value={newEmployees.status}
+              required
+            >
+              <option value="">Status</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+              <option value="Offline">Offline</option>
+            </select>
+          </div>
+          <div className="flex flex-col mt-5 w-full">
+            <label className="text-xs mb-3 font-bold" htmlFor="">
+              Age:
+            </label>
+            <input
+              className="px-6 py-2.5 border w-full border-zinc-800 rounded-lg"
+              type="number"
+              placeholder="Enter"
+              onChange={handleInput}
+              name="age"
+              value={newEmployees.age}
+              required
+            />
+          </div>
 
-        <div className="flex flex-col mt-5">
-          <label htmlFor="">Role:</label>
-          <select
-            name="role"
-            className="px-6 py-2.5 border"
-            onChange={handleInput}
-            value={newEmployees.role}
-            required
-          >
-            <option value="">Status</option>
-            <option value="admin">Admin</option>
-            <option value="owner">Owner</option>
-            <option value="member">Member</option>
-          </select>
+          <div className="flex flex-col mt-5 w-full">
+            <label className="text-xs mb-3 font-bold" htmlFor="">
+              Role:
+            </label>
+            <select
+              name="role"
+              className="px-6 py-2.5 border w-full border-zinc-800 rounded-lg"
+              onChange={handleInput}
+              value={newEmployees.role}
+              required
+            >
+              <option value="">Status</option>
+              <option value="admin">Admin</option>
+              <option value="owner">Owner</option>
+              <option value="member">Member</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div className="mt-10 flex items-center justify-center">
-        <button className="mr-5 font-bold" type="submit">
-          Aceptar
-        </button>
-        <Link className="font-bold" to="/">
-          Cancelar
-        </Link>
-      </div>
-    </form>
+        <div className="mt-10 flex items-center justify-center ">
+          <Link
+            className=" mr-5 font-bold border border-zinc-800 px-5 py-2"
+            to="/"
+          >
+            Cancel
+          </Link>
+          <button
+            className="font-bold text-white bg-black border border-zinc-800 px-5 py-2"
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
